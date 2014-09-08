@@ -1,0 +1,10 @@
+logs/*
+*.log
+!.gitkeep
+node_modules/
+tmp
+.idea
+.DS_Store
+bower_components/
+test_out/
+test_e2e/

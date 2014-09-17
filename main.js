@@ -1,14 +1,27 @@
-function MainCtrl($scope){
+var myApp = angular.module('myApp', []);
 
-  $scope.data = { greeting: "Hello" };
+myApp.factory('DataStore', function() {
+  var dataToShare = {
+    message: "Use service to share data between controllers", 
+    //todo
+    todo: 'Learn AngularJS'
+  };
 
-  //change the character
-  $scope.data.character='unknown';
+  return dataToShare;
+})
 
-  //language and acronym are missing, please help write them
+function FirstCtrl($scope, DataStore){
 
-  //language
+  $scope.message = DataStore.message;
 
-  //acronym
+  //add todo variable
+
+}
+
+function SecondCtrl($scope, DataStore){
+
+  $scope.message = DataStore.message;
+
+  //add todo variable
 
 }

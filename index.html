@@ -1,22 +1,40 @@
 <!doctype html>
-<html ng-app>
+<html ng-app="myApp">
   <head>
+    <meta charset="UTF-8">
     <title>AngularJS Controller</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
-    <div class="container">
+    <div class="container" style="margin-top: 60px;">
 
-    <div class="jumbotron">
-      <div ng-controller="MainCtrl">
-        <h1>{{data.greeting + " Controller"}}</h1>
+      <div class="well" ng-controller="FirstCtrl">
+        <strong>FirstCtrl 控制的页面区域</strong>
+        <input type="text" class="form-control" ng-model="message">
         <p>
-          Welcome to the {{data.character}} {{data.language}} {{data.acronym}} Framework!
+          从DataStore获得message: {{message}}
+        </p>
+        <p>
+          <!-- 加入 todo -->
+          从DataStore获得todo: 
         </p>
       </div>
-    </div>
+
+      <br>
+
+      <div class="well" ng-controller="SecondCtrl">
+        <strong>SecondCtrl 控制的页面区域</strong>
+        <input type="text" class="form-control" ng-model="message">
+        <p>
+          从DataStore获得message: {{message}}
+        </p>
+        <p>
+          <!-- 加入 todo -->
+          从DataStore获得todo: 
+        </p>
+        </div>
 
     </div>
   </body>

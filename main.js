@@ -1,48 +1,48 @@
 var myApp = angular.module('myApp', []);
 
-myApp.factory('DataStore', function() {
-  var dataToShare = {
-    message: "rats live on no evil star", 
-  };
-
-  var setMessage = function(message){
-    dataToShare.message = message;
-  };
-
-  var getMessage = function(){
-    return dataToShare.message;
-  }
-
-  return {
-    'getMessage': getMessage,
-    'setMessage': setMessage,
-  } 
+myApp.factory('Avengers', function() {
+    var Avengers = {};
+    Avengers.cast = [
+      {
+        name: "Robert Downey Jr.",
+        character: "Tony Stark / Iron Man"
+      },
+      {
+        name: "Chris Evans",
+        character: "Steve Rogers / Captain America"
+      },
+      {
+        name: "Mark Ruffalo",
+        character: "Bruce Banner / The Hulk"
+      },
+      {
+        name: "Chris Hemsworth",
+        character: "Thor"
+      },
+      {
+        name: "Scarlett Johansson",
+        character: "Natasha Romanoff / Black Widow"
+      },
+      {
+        name: "Jeremy Renner",
+        character: "Clint Barton / Hawkeye"
+      },
+      {
+        name: "Tom Hiddleston",
+        character: "Loki"
+      }
+    ];
+    return Avengers;
 })
 
-function FirstCtrl($scope, DataStore){
+function SuperherosCtrl($scope, Avengers) {
+    $scope.avengers = Avengers;
 
-  $scope.message = DataStore.getMessage();
+    //完成该方法，将选中的actor值附到$scope上，并在页面上显示出来
+    $scope.select = function(actor){
 
-  $scope.saveMessage = function(){
-    //调用工厂中setMessage方法来保存更新的message
-    
-  };
 
-}
 
-function SecondCtrl($scope, DataStore){
 
-  $scope.message = DataStore.getMessage();
-
-  $scope.reversedMessage = function(message) {
-    return message.split("").reverse().join("");
-  };
-
-  $scope.fetchMessage = function(){
-    //调用工厂中getMessage方法来获取更新过的message
-
-    //调用控制域上reversedMessage方法来更新倒序显示的消息
-
-  };
-
+    };
 }

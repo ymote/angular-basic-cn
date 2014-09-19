@@ -2,39 +2,20 @@
 <html ng-app="myApp">
   <head>
     <meta charset="UTF-8">
-    <title>AngularJS Filter</title>
+    <title>AngularJS Directive</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
     <div class="container" style="margin-top: 60px;">
-
-      <div ng-controller="SuperherosCtrl">
-        <label>搜索角色或演员</label><input type="text" ng-model="search">
-        <label>显示的数量</label><input type="number" ng-model="limit">
-        <label>从大到小的顺序</label><input type="checkbox" ng-model="reverse">
-        <table class="table table-bordered table-striped">
-          <tr>
-            <!-- ng-click中增加reverse变量改变排序方向 -->
-            <th><a href="" ng-click="attr = 'name';">演员</a></th>
-            <th><a href="" ng-click="attr = 'character';">角色</a></th>
-          </tr>
-          <!-- 在orderBy上增加reverse filter，可以选择正序或倒序 -->
-          <tr ng-repeat="actor in avengers.cast | filter:search | orderBy:attr:reverse | limitTo: limit ">
-            <td>{{actor.name | uppercase}}</td>
-            <td>{{actor.character | lowercase}}</td>
-          </tr>
-        </table>
-
-        <div class="well">
-          <dl class="dl-horizontal">
-            <dt>票房收入($)</dt><dd>{{boxOfficeInUS | currency}}</dd>
-            <dt>票房收入（¥）</dt><dd>{{boxOfficeInCN | currency: "¥" }}</dd>
-            <dt>上映日期</dt><dd>{{release | date:'short'}}</dd>
-            <dt>评分</dt><dd>{{rating | number: 1}}</dd>
-          </dl>
-        </div>
+      <div class="jumbotron">
+        <p>1. 定义新的 DOM 元素</p>
+        <helloworld></helloworld>
+        <br>
+        <!-- 使用attribute模式完成helloworld2-->
+        <p>2. 使用增加属性的方法</p>
+        <!-- <div helloworld></div> -->
       </div>
     </div>
   </body>

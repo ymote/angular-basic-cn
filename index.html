@@ -7,15 +7,36 @@
     <script src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </head>
-  <body>
+  <body ng-init="currentPage=3; numPages=5; selectCount=0">
     <div class="container" style="margin-top: 60px;">
-      <div class="jumbotron">
-        <p>1. 定义新的 DOM 元素</p>
-        <helloworld></helloworld>
-        <br>
-        <!-- 使用attribute模式完成helloworld2-->
-        <p>2. 使用增加属性的方法</p>
-        <!-- <div helloworld></div> -->
+      <div class="row well">
+        <h3>按钮控件例子</h3>
+        <button>默认的样式</button>
+        <button size="lg" type="submit">通过属性改变样式</button>
+      </div>
+      <div class="row well">
+        <h3>翻页控件例子</h3>
+        <pagination num-pages="numPages" current-page="currentPage" on-select-page="selectCount=selectCount+1"></pagination>
+        <form class="form-horizontal" role="form">
+          <div class="form-group">
+            <label class="col-sm-2 control-label">页数：</label>
+            <div class="col-sm-4">
+              <input ng-model="numPages" type="number" class="form-control">
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">当前页:</label>
+            <div class="col-sm-4">
+              <input ng-model="currentPage" type="number"class="form-control" >
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-sm-2 control-label">累计选择数:</label>
+            <div class="col-sm-4">
+              <p class="form-control-static">{{selectCount}}</p>
+            </div>            
+          </div>
+        </form>
       </div>
     </div>
   </body>

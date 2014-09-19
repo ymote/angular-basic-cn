@@ -6,17 +6,18 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="main.js"></script>
+    <style>
+      .panel-body p {
+        margin: 15px;
+      }
+    </style>
   </head>
   <body>
-    <div class="container" style="margin-top: 60px;" ng-controller="AlertController">
+    <div class="container" style="margin-top: 60px;" ng-controller="AppCtrl">
       <div class="row">
-        <h3>用Angular构造系统通知</h3>
-        <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
-        <button class='btn btn-default' ng-click="addAlert()">增加随机通知</button>
-      </div>
-      <div class="row">
-        <h3>Panel可以用来提供详细信息 <button class='btn btn-default' ng-click="randomPanel()">随机Panel</button></h3>
-        <panel type="panel.type" title="panel.title">{{panel.content}}</panel>
+        <div ng-app="phoneApp">
+          <phone number="13812345678" network="network" make-call="callContent(number, network, message)"></phone>
+        </div>
       </div>
     </div>
   </body>

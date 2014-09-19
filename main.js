@@ -37,12 +37,14 @@ myApp.factory('Avengers', function() {
 
 function SuperherosCtrl($scope, Avengers) {
     $scope.avengers = Avengers;
+    $scope.limit = 10;
+    $scope.reverse = false;
 
-    //完成该方法，将选中的actor值附到$scope上，并在页面上显示出来
-    $scope.select = function(actor){
+    $scope.boxOfficeInUS = 220000000;
+    $scope.boxOfficeInCN = 1400000000;
 
+    $scope.rating = 8.234;
 
-
-
-    };
+    var releaseDate = new Date("2012-05-04");
+    $scope.release = releaseDate.getTime();
 }

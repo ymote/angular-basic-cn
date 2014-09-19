@@ -18,6 +18,18 @@
         <h3>Panel可以用来提供详细信息 <button class='btn btn-default' ng-click="randomPanel()">随机Panel</button></h3>
         <panel type="panel.type" title="panel.title">{{panel.content}}</panel>
       </div>
+      <!-- 
+        panel的模版，其中{{type}}可以是success,warning,info,danger
+
+        <div class="panel panel-{{type}}">
+          <div class="panel-heading">
+            <h3 class="panel-title">{{title}}</h3>
+          </div>
+          <div class="panel-body">
+            使用ng-transclude来插入content
+          </div>
+        </div>
+      -->
     </div>
   </body>
 </html>

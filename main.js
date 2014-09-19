@@ -17,15 +17,18 @@ myApp.directive('alert', function () {
   };
 });
 
+//根据alert指令的例子完成panel指令
+//template的内容在index.html中有说明
+//注意scope传入type和title
 myApp.directive('panel', function(){
   return {
     restrict:'EA',
     replace: true,
-    template:
-    '<div class="panel panel-{{type}}">' +
-      '<div class="panel-heading">{{title}}</div>' +
-      '<div class="panel-body"><div ng-transclude></div></div>' +
-    '</div>',
+    template: 
+      //完成template的内容的构建
+      '',
+
+ 
     transclude:true,
     scope:{
       type:'=',
@@ -42,9 +45,11 @@ myApp.controller('AlertController', function ($scope) {
     { type: 'warning', msg: '您的资料不完整，请仔细检查填写结果。'}
   ];
 
+  //随机在$scope.alerts中选择alert并加到$scope.alerts的末尾
+  //双向绑定会自动更新页面
   $scope.addAlert = function() {
-    var newAlert = angular.copy($scope.alerts[Math.floor(Math.random()*$scope.alerts.length)]);
-    $scope.alerts.push(newAlert);
+
+
   };
 
   $scope.closeAlert = function(index) {
@@ -58,8 +63,9 @@ myApp.controller('AlertController', function ($scope) {
     { type: 'warning', title: '警告' , content: '您的资料不完整，请仔细检查填写结果。'}
   ];
 
+  //从panels中随机选择一个panel,并附值给$scope.panel
   $scope.randomPanel = function(){
-    $scope.panel = panels[Math.floor(Math.random()*panels.length)];
-  }
+
+  };
 
 });

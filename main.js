@@ -1,29 +1,25 @@
 var myApp = angular.module('myApp', []);
 
-myApp.controller("AppCtrl", function($scope) {
-  $scope.callContent = function(number, network, message) {
-    alert("号码： " + number + " 运营商： "+ network + " 通话内容： " + message);
-  }
-});
+myApp.controller("AppCtrl", function($scope,$q) {
 
-myApp.directive("phone", function() {
-  return {
-    restrict: "E",
-    scope: {
-      number: "@",
-      network: "=",
-      makeCall: "&"
-    },
-    template: '<div class="panel panel-info"><div class="panel-heading">通话控制面板</div>'+
-      '<div class="panel-body"><p>呼叫号码: {{number}}</p>'+
-      '<p>我的运营商:<select ng-model="network" ng-options="net for net in networks"></select></p>' +
-      '<p><input type="text" ng-model="value" class="form-control" placeholder="输入通话内容"></p>' +
-      '<p><button class="btn btn-default" ng-click="makeCall({number: number, network:network, message: value})">拨打电话</button></p>'+
-      '</div></div>',
+  //习题，创建$scope.food变量保存food
+  $scope.eat = function(food){
+    var deferred = $q.defer();
+    var promise = deferred.promise;
 
-    link: function(scope) {
-      scope.networks = ["移动","联通"];
-      scope.network = scope.networks[0]
-    }
-  }
+    //习题，将结果通过$scope显示在页面上
+    promise.then(function(food){
+      alert("今天晚饭的食物是"+food);
+    }, function(reason){
+      alert(reason);
+    });
+
+    if(!food){
+      deferred.reject("今晚不吃饭，要减肥。");
+    } 
+    else {
+      deferred.resolve(food);
+    }  
+  };
+
 });

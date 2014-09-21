@@ -2,23 +2,32 @@
 <html ng-app="myApp">
   <head>
     <meta charset="UTF-8">
-    <title>AngularJS Directive</title>
+    <title>AngularJS Service</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <script src="bower_components/angular/angular.js"></script>
     <script type="text/javascript" src="main.js"></script>
-    <style>
-      .panel-body p {
-        margin: 15px;
-      }
-    </style>
   </head>
   <body>
     <div class="container" style="margin-top: 60px;" ng-controller="AppCtrl">
-      <div class="row">
-        <div ng-app="phoneApp">
-          <phone number="13812345678" network="network" make-call="callContent(number, network, message)"></phone>
+      <h3>菜单</h3>
+      <div class="row">  
+        <div class="col-md-2">
+          <button ng-click=eat("麦当劳") class="btn btn-default">麦当劳</button>
         </div>
+        <div class="col-md-2">
+          <button ng-click=eat("必胜客") class="btn btn-default">必胜客</button>
+        </div> 
+        <div class="col-md-2">
+          <button ng-click=eat("小肥羊") class="btn btn-default">小肥羊</button>
+        </div> 
+        <div class="col-md-2">
+          <button ng-click=eat(false) class="btn btn-default">不吃晚饭，减肥</button>
+        </div>                      
       </div>
+
+      <h3 ng-show="food">今晚的食物是{{food}}</h3>
+      <h3 ng-hide="food">今晚减肥，不吃晚饭</h3>
+
     </div>
   </body>
 </html>

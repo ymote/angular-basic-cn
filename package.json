@@ -9,6 +9,6 @@
   "scripts": {
     "postinstall": "bower install --allow-root",
     "prestart": "npm install",
-    "start": "http-server -a 0.0.0.0 -p 8000"
+    "start": "http-server --cors -a 0.0.0.0 -p 8000"
   }
 }

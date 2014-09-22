@@ -14,30 +14,6 @@
         <button>默认的样式</button>
         <button size="lg" type="submit">通过属性改变样式</button>
       </div>
-      <div class="row well">
-        <h3>翻页控件例子</h3>
-        <pagination num-pages="numPages" current-page="currentPage" on-select-page="selectCount=selectCount+1"></pagination>
-        <form class="form-horizontal" role="form">
-          <div class="form-group">
-            <label class="col-sm-2 control-label">页数：</label>
-            <div class="col-sm-4">
-              <input ng-model="numPages" type="number" class="form-control">
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label">当前页:</label>
-            <div class="col-sm-4">
-              <input ng-model="currentPage" type="number"class="form-control" >
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="col-sm-2 control-label">累计选择数:</label>
-            <div class="col-sm-4">
-              <p class="form-control-static">{{selectCount}}</p>
-            </div>            
-          </div>
-        </form>
-      </div>
     </div>
   </body>
 </html>

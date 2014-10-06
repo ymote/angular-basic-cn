@@ -10,18 +10,18 @@ myApp.factory('DataStore', function() {
   return dataToShare;
 })
 
-function FirstCtrl($scope, DataStore){
+myApp.controller('FirstCtrl',function($scope, DataStore){
 
   $scope.message = DataStore.message;
 
   //add todo variable
 
-}
+});
 
-function SecondCtrl($scope, DataStore){
+myApp.controller('SecondCtrl', function($scope, DataStore){
 
   $scope.message = DataStore.message;
 
   //add todo variable
 
-}
+});

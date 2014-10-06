@@ -6,9 +6,8 @@ angular.module('myApp', [])
 
   //change the character
   $scope.data.character='Unknown';
-
+  
   //language and acronym are missing, please help write them
-
   //language
 
   //acronym

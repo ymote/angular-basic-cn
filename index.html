@@ -20,11 +20,11 @@
         <table class="table table-bordered table-striped">
           <tr>
             <!-- ng-click中增加reverse变量改变排序方向 -->
-            <th><a class="name" href="" ng-click="attr = 'name';reverse=!reverse">演员</a></th>
-            <th><a class="character" href="" ng-click="attr = 'character';reverse=!reverse">角色</a></th>
+            <th><a class="name" href="" ng-click="attr = 'name';">演员</a></th>
+            <th><a class="character" href="" ng-click="attr = 'character';">角色</a></th>
           </tr>
           <!-- 在orderBy上增加reverse filter，可以选择正序或倒序 -->
-          <tr ng-repeat="actor in avengers.cast | filter:search | orderBy:attr:reverse | limitTo: limit ">
+          <tr ng-repeat="actor in avengers.cast | filter:search | orderBy:attr | limitTo: limit ">
             <td>{{actor.name | uppercase}}</td>
             <td>{{actor.character | lowercase}}</td>
           </tr>

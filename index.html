@@ -2,9 +2,12 @@
 <html ng-app="myApp">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" /> 
     <title>AngularJS Filter</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <script src="bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <script src="lib/angular/angular.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
@@ -21,15 +24,15 @@
             <th>操作</th>
           </tr>
           <!-- 在orderBy上增加reverse filter，可以选择正序或倒序 -->
-          <tr ng-repeat="actor in avengers.cast | filter:search | orderBy:attr ">
-            <td><!-- 增加$index--></td>
+          <tr ng-repeat="actor in avengers.cast track by $index| filter:search | orderBy:attr ">
+            <td>{{$index+1}}</td>
             <td>{{actor.name}}</td>
             <td>{{actor.character}}</td>
             <td><button class="btn btn-primary" ng-click="select(actor)">选择该角色</button></td>
           </tr>
         </table>
         <h3>
-          选中的角色是<!--character-->,演员是<!--name-->
+          选中的角色是{{actor.character}},演员是{{actor.name}}
         </h3>
       </div>
     </div>

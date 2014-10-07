@@ -2,9 +2,12 @@
 <html ng-app="myApp">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />      
     <title>AngularJS Directive</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <script src="bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <script src="lib/angular/angular.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
@@ -12,10 +15,10 @@
       <div class="row">
         <h3>用Angular构造系统通知</h3>
         <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
-        <button class='btn btn-default' ng-click="addAlert()">增加随机通知</button>
+        <button class='btn btn-default add-alert' ng-click="addAlert()">增加随机通知</button>
       </div>
       <div class="row">
-        <h3>Panel可以用来提供详细信息 <button class='btn btn-default' ng-click="randomPanel()">随机Panel</button></h3>
+        <h3>Panel可以用来提供详细信息 <button class='btn btn-default select-panel' ng-click="randomPanel()">随机Panel</button></h3>
         <panel type="panel.type" title="panel.title">{{panel.content}}</panel>
       </div>
       <!-- 

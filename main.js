@@ -40,6 +40,7 @@ function SuperherosCtrl($scope, Avengers) {
 
     //完成该方法，将选中的actor值附到$scope上，并在页面上显示出来
     $scope.select = function(actor){
-      $scope.actor = actor;
+
+
     };
 }

@@ -24,15 +24,15 @@
             <th>操作</th>
           </tr>
           <!-- 在orderBy上增加reverse filter，可以选择正序或倒序 -->
-          <tr ng-repeat="actor in avengers.cast track by $index| filter:search | orderBy:attr ">
-            <td>{{$index+1}}</td>
+          <tr ng-repeat="actor in avengers.cast | filter:search | orderBy:attr ">
+            <td><!-- 增加$index--></td>
             <td>{{actor.name}}</td>
             <td>{{actor.character}}</td>
             <td><button class="btn btn-primary" ng-click="select(actor)">选择该角色</button></td>
           </tr>
         </table>
         <h3>
-          选中的角色是{{actor.character}},演员是{{actor.name}}
+          选中的角色是<!--character-->,演员是<!--name-->
         </h3>
       </div>
     </div>

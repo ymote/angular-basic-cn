@@ -2,15 +2,18 @@
 <html ng-app="myApp">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />    
     <title>AngularJS Service</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <script src="bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <script src="lib/angular/angular.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
     <div class="container" style="margin-top: 60px;" ng-controller="AppCtrl">
       <h3>菜单</h3>
-      <div class="row">  
+      <div class="row menu">  
         <div class="col-md-2">
           <button ng-click=eat("麦当劳") class="btn btn-default">麦当劳</button>
         </div>
@@ -25,8 +28,8 @@
         </div>                      
       </div>
 
-      <h3 ng-show="food">今晚的食物是{{food}}</h3>
-      <h3 ng-hide="food">今晚减肥，不吃晚饭</h3>
+      <h3 ng-show="food" class="food">今晚的食物是{{food}}</h3>
+      <h3 ng-hide="food" class="no-food">今晚减肥，不吃晚饭</h3>
 
     </div>
   </body>

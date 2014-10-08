@@ -2,9 +2,12 @@
 <html ng-app="myApp">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />     
     <title>AngularJS Service</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <script src="bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <script src="lib/angular/angular.js"></script>
     <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
@@ -31,9 +34,15 @@
             </div>
           </div> 
           <div class="form-group">
+            <label class="col-sm-2 control-label">Problem with Order</label>
+            <div class="col-sm-10">
+              <input class="form-control" placeholder="Reason" ng-model="reason">
+            </div>
+          </div>           
+          <div class="form-group">
             <div class="col-sm-10 col-sm-offset-2">
-              <button ng-click=xiju() class="btn btn-success">喜剧</button>
-              <button ng-click=beiju() class="btn btn-danger">悲剧</button>
+              <button ng-click=xiju() class="btn btn-success xiju">喜剧</button>
+              <button ng-click=beiju() class="btn btn-danger beiju">悲剧</button>
             </div>
           </div>                             
         </form>

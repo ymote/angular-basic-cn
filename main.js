@@ -66,15 +66,15 @@ myApp.controller("AppCtrl", function($scope,$q) {
   $scope.xiju = function(){
     var person = new Person($scope.name, $scope);
     //完成吃到晚饭流程
-    order(person,$scope.food);
-    shangriLa.deliverOrder($scope.deliver);
+
+
   };
 
   $scope.beiju = function(){
     var person = new Person($scope.name, $scope);
     //完成挨饿流程    
-    order(person,$scope.food);
-    shangriLa.problemWithOrder($scope.reason);
+
+
   };
 
 });

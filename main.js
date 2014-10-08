@@ -10,10 +10,10 @@ myApp.controller("AppCtrl", function($scope,$q) {
     //习题，将结果通过$scope显示在页面上
     promise.then(function(food){
       alert("今天晚饭的食物是"+food);
-      $scope.food=food;
+
     }, function(reason){
       alert(reason);
-      $scope.food=false;
+
     });
 
     if(!food){

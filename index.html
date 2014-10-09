@@ -2,9 +2,12 @@
 <html ng-app="myApp">
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />         
     <title>AngularJS Service</title>
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
-    <script src="bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.css">
+    <script src="lib/angular/angular.js"></script>
     <script type="text/javascript" src="main.js"></script>
     <style type="text/css">
       .phones {
@@ -31,7 +34,6 @@
       <div class="row">
         <div class="col-md-2">
           <!--Sidebar content-->
-
           搜索: <input ng-model="query">
           排序:
           <select ng-model="orderProp">
@@ -43,7 +45,6 @@
         </div>
         <div class="col-md-10">
           <!--Body content-->
-
           <ul class="phones">
             <li ng-repeat="phone in phones | filter:query | orderBy:orderProp" class="thumbnail">
               <a href="" class="thumb"><img ng-src="{{phone.imageUrl}}"></a>

@@ -21,9 +21,11 @@ describe('Angular Directive', function() {
           selectPanelBtn.click();
           var panel = element(by.css('.panel'));
           var panelHead = element(by.css('.panel-heading'));
+          var panelTitle = element(by.css('.panel-title'));
           var panelBody = element(by.css('.panel-body'));
           expect(panel.isPresent()).toBe(true);
           expect(panelHead.isPresent()).toBe(true);
+          expect(panelTitle.isPresent()).toBe(true);
           expect(panelBody.isPresent()).toBe(true);
         });
       });

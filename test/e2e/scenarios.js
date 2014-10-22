@@ -25,7 +25,7 @@ describe('Angular Directive', function() {
           var panelContent = element(by.css('.panel-body div span'));
           expect(panel.isPresent()).toBe(true);
           expect(panelHead.isPresent()).toBe(true);
-          expect(panelContent.isPresent()).toBe(true);
+          expect(panelContent.getText()).toBeTruthy();
           expect(panelBody.isPresent()).toBe(true);
         });
       });

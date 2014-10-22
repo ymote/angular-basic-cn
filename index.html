@@ -18,12 +18,10 @@
         <table class="table table-bordered table-striped">
           <tr>
             <th>序号</th>
-            <!-- ng-click中增加reverse变量改变排序方向 -->
             <th><a href="" ng-click="attr = 'name';">演员</a></th>
             <th><a href="" ng-click="attr = 'character';">角色</a></th>
             <th>操作</th>
           </tr>
-          <!-- 在orderBy上增加reverse filter，可以选择正序或倒序 -->
           <tr ng-repeat="actor in avengers.cast | filter:search | orderBy:attr ">
             <td><!-- 增加$index--></td>
             <td>{{actor.name}}</td>

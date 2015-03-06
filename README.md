@@ -1,3 +1,31 @@
-###Angular Basic
+## 导入AngularJS
 
-Learn basic concepts and conventions of AngularJS.
+这个练习我们做一件很简单的事情－在页面上加入AngularJS的引用。
+
+Angular的应用代码中有很多特色，很好辨认。
+
+第一个是```ngApp```，所有的应用都需要这个申明。它负责初始化整个项目，通常出现在网页的根目录中，比如  ```<body>``` 或 ```<html>```。只允许初始化一次。
+
+第二个是```ng-model```，它是AngularJS双向绑定的典型用法。我们创建了一个变量```yourName``` ，Angular会自动监控这个变量并在页面上更新。
+
+最后是```{{  }}```，用它围绕定义的变量就实现了对变量的动态更新。
+
+从这个简单的例子我们总结下Angular的特点：
+
+**1.** 基本就是HTML的用法，我们没有发明新的表达式或编程语言。
+
+**2.** 动态更新异常容易。如果您之前接触过jQuery,Backbone,Ember等等的框架，可以比较下在它们中实现的方法，就能发现Angular的实现简单的离谱。
+
+之后的学习我们会看到Angular不仅实现简单，而且功能非常强大。所以它能成为现在最热门的前台Javascript框架。
+
+
+## 习题说明
+ 
+```javascript
+<script src="lib/angular/angular.js"></script>
+```
+AngularJS下载到了lib文件夹下，这里直接引用即可。
+
+**2.** **提交**并预览结果。
+
+**3.**在输入框中输入任何东西，在页面无刷新的情况下，```h1```元素中的内容实时更新。 这就是Angular的双向绑定的实现。

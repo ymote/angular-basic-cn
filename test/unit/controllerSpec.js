@@ -13,7 +13,7 @@ describe('Angular controllers', function() {
       ctrl = $controller('MainCtrl', {$scope: scope});
     }));
 
-    it('should has right scope data', function() {
+    it('scope.data should have three attributes -- character: Superheroic, language: Javascript, acronym: MVW', function() {
       expect(scope.data.character).toEqual('Superheroic');
       expect(scope.data.language).toEqual('Javascript');
       expect(scope.data.acronym).toEqual('MVW');

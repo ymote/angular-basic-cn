@@ -1,7 +1,7 @@
 'use strict';
 
 /* jasmine specs for controllers go here */
-describe('Angular controllers', function() {
+describe('Test Share Data betwwen Controllers using Service', function() {
 
   describe('Controller FirstCtrl', function(){
     beforeEach(module('myApp'));

@@ -1,17 +1,12 @@
 'use strict';
 
-describe('Angular Controller', function() {
+describe('Test ng-repeat filter', function() {
 
-  describe('index page', function() {
+  describe('When I click the select button in a table row, the information '+
+    'should be displayed in the h3 tag', function() {
 
     beforeEach(function() {
       browser.get('index.html');
-    });
-
-    it('should select actor in the table and shown in h3', function() {
-      element(by.model('search')).clear();
-      checkRow(0);
-      checkRow(3);
     });
 
     var checkRow = function(rowIndex){
@@ -27,6 +22,14 @@ describe('Angular Controller', function() {
       expect(h3.getText()).toContain(name);
       expect(h3.getText()).toContain(character);
     };
+    
+    it('select the first row and the 4th row should work', function() {
+      element(by.model('search')).clear();
+      checkRow(0);
+      checkRow(3);
+    });
+
+
 
   });
   

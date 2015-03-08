@@ -3,7 +3,7 @@
 /* jasmine specs for controllers go here */
 describe('Angular controllers', function() {
 
-  describe('FirstCtrl', function(){
+  describe('Controller FirstCtrl', function(){
     beforeEach(module('myApp'));
 
     var scope, ctrl;
@@ -13,12 +13,12 @@ describe('Angular controllers', function() {
       ctrl = $controller('FirstCtrl', {$scope: scope});
     }));
 
-    it('should has right scope data', function() {
+    it('should have scope varialbe todo, and its value should be \'Learn AngularJS\'', function() {
       expect(scope.todo).toEqual('Learn AngularJS');
     });
   });
 
-  describe('SecondCtrl', function(){
+  describe('Controller SecondCtrl', function(){
     beforeEach(module('myApp'));
 
     var scope, ctrl;
@@ -28,7 +28,7 @@ describe('Angular controllers', function() {
       ctrl = $controller('SecondCtrl', {$scope: scope});
     }));
 
-    it('should has right scope data', function() {
+    it('should also have scope variable todo,  and its value should also be \'Learn AngularJS\'', function() {
       expect(scope.todo).toEqual('Learn AngularJS');
     });
   });

@@ -2,9 +2,8 @@
 
 describe('Test Defining Methods on Controllers', function() {
 
-  describe('when I am on index page. I enter \'87654321\' in the first input, '+
-    'then I click the button in first controller to save the message, '+
-    'then I click the button in second controller to retrive the message.', function() {
+  describe('I enter \'87654321\' in the first input, '+
+    'and follow the procedures described in exercise.', function() {
 
     beforeEach(function() {
       browser.get('index.html');

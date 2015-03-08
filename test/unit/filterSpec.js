@@ -1,8 +1,8 @@
-describe('Test Angular Filter', function() {
+describe('Test Angular Filter\n', function() {
 
 	beforeEach(module('myApp'));
 
-	describe('shiftString filter should shift string by speficied number', function() {
+	describe('shiftString filter should shift string by speficied number\n', function() {
 
 	  it('shift \'abcdefg\' by 2 should return \'fgabcde\'; shift \'this is a filter by 3 \' should '+
 	    'return \'terthis is a fil\'',

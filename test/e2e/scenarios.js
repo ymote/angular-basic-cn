@@ -16,7 +16,7 @@ describe('Test ng-repeat filter', function() {
 
     it('should show the index 4 in table row', function(){
       var index = row.element(by.css('td:nth-child(1)')).getText();
-      expect(index).toBe((rowIndex+1).toString());
+      expect(index).toBe('4');
     });
     
     it('should show actor name in h3 tag', function(){

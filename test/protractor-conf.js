@@ -1,4 +1,7 @@
-var myIP = process.env.IP;
+var fs = require('fs');
+var re = /\S+/;
+
+var myIP = re.exec(fs.readFileSync('/etc/hosts','utf8'))[0];
 var driverIP = '172.17.42.1';
 
 exports.config = {

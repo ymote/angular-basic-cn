@@ -1,14 +1,16 @@
 'use strict';
 
-describe('Angular Controller', function() {
+describe('Test Defining Methods on Controllers', function() {
 
-  describe('index page', function() {
+  describe('when I am on index page', function() {
 
     beforeEach(function() {
       browser.get('index.html');
     });
 
-    it('should filter the phone list as user types into the search box', function() {
+    it('If I enter \'87654321\' in the first input, then I click the button in first controller to save the message, '+
+        'then I click the button in second controller to retrive the message. I should see \'从DataStore获得message: 87654321\' '+
+        ' in <p class=\'message\'> element', function() {
       var firstInput = element(by.css('.first input'));
       firstInput.clear();
       firstInput.sendKeys('87654321');

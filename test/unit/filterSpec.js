@@ -4,11 +4,14 @@ describe('Test Angular Filter\n', function() {
 
 	describe('shiftString filter should shift string by speficied number\n', function() {
 
-	  it('shift \'abcdefg\' by 2 should return \'fgabcde\'; shift \'this is a filter by 3 \' should '+
-	    'return \'terthis is a fil\'',
-	      inject(function(shiftStringFilter) {
-	    expect(shiftStringFilter('abcdefg',2)).toBe('fgabcde');
-	    expect(shiftStringFilter('this is a filter',3)).toBe('terthis is a fil');
-	  }));
+    it('apply shiftString filter on  \'abcdefg\' by 2 should return \'fgabcde\'', inject(function(shiftStringFilter) {
+      expect(shiftStringFilter('abcdefg',2)).toBe('fgabcde');
+    }));
+    
+    it('apply shiftString filter on \'this is a filter by 3 \' should '+
+      'return \'terthis is a fil\'', inject(function(shiftStringFilter) {
+        expect(shiftStringFilter('this is a filter',3)).toBe('terthis is a fil');
+    }));
+    
 	});
 });

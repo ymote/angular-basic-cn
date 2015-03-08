@@ -15,21 +15,15 @@ describe('Test Defining Methods on Controllers', function() {
     });
 
     it('I should see \'从DataStore获得message: 87654321\' '+
-        ' in <p class=\'message\'> element', function() {
+        'and \'倒序的message是： 12345678\'.', function() {
 
       var secondMsg = element(by.css('.second .message'));
       expect(secondMsg.getText()).toBe('从DataStore获得message: 87654321');
       
-    });
-
-    it('I should see \'倒序的message是： 12345678\' in '+
-      '<p class=\'reverse-message\'> element', function(){
-      
       var secondRMsg = element(by.css('.second .reverse-message'));
       expect(secondRMsg.getText()).toBe('倒序的message是： 12345678');
-            
+      
     });
-
 
   });
   

@@ -1,8 +1,8 @@
 'use strict';
 
-describe('Angular Promise', function() {
+describe('Test Promise.', function() {
 
-  describe('John order Pizza story. deliver time is 30 min.', function() {
+  describe('', function() {
 
     beforeEach(function() {
       browser.get('index.html');
@@ -12,25 +12,25 @@ describe('Angular Promise', function() {
 
     });
 
-    it('Should show 3 phones on page when 显示数量 is 3', function() {
+    it('Should show 3 phones on page when 显示数量 is 3 -- $scope.number=3.', function() {
       var name = element(by.model('number'));
       name.clear();
       name.sendKeys('3');
 
       element.all(by.repeater('phone in phones')).then(function(rows) {
         var length = rows.length;
-        expect(length).toBe(3);
+        expect(length).toBe(3, 'There should be 3 phones on page');
       });
     });
 
-    it('Should change number of phones on page when 显示数量 is changed', function() {
+    it('Should change number of phones on page when 显示数量 is changed -- $scope.number change.', function() {
       var name = element(by.model('number'));
       name.clear();
       name.sendKeys('5');
 
       element.all(by.repeater('phone in phones')).then(function(rows) {
         var length = rows.length;
-        expect(length).toBe(5);
+        expect(length).toBe(5, 'Should show 5 phones on page when $scope.number=5.');
       });
 
       var name = element(by.model('number'));
@@ -39,7 +39,7 @@ describe('Angular Promise', function() {
 
       element.all(by.repeater('phone in phones')).then(function(rows) {
         var length = rows.length;
-        expect(length).toBe(10);
+        expect(length).toBe(10, 'Should show 10 phones on page when $scope.number=10.');
       });
     });
 

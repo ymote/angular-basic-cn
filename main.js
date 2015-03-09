@@ -16,6 +16,7 @@ myApp.directive("phone", function() {
     },
     template: '<div class="panel panel-info"><div class="panel-heading">通话控制面板</div>'+
       '<div class="panel-body"><p>呼叫号码: {{number}}</p>'+
+      '<p><!-- 增加input输入number --></p>'+
       '<p>我的运营商:<select ng-model="network" ng-options="net for net in networks"></select></p>' +
       '<p><input type="text" ng-model="value" class="form-control" placeholder="输入通话内容"></p>' +
       '<p><button class="btn btn-default" ng-click="makeCall({number: number, network:network, message: value})">拨打电话</button></p>'+

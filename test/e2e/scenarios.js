@@ -27,11 +27,7 @@ describe('Test Transclude.', function() {
       var panel = element(by.css('.panel'));
       var panelHead = element(by.css('.panel-heading'));
       var panelBody = element(by.css('.panel-body'));
-      var panelContent = element(by.css('.panel-body div span'));
-      expect(panel.isPresent()).toBe(true);
-      expect(panelHead.isPresent()).toBe(true);
-      expect(panelContent.getText()).toBeTruthy();
-      expect(panelBody.isPresent()).toBe(true);    
+      expect(panel.isPresent() && panelHead.isPresent() && panelBody.isPresent()).toBe(true);
     });
 
   });

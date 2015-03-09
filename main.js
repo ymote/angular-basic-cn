@@ -46,7 +46,7 @@ myApp.controller('AlertController', function ($scope) {
   ];
 
   //随机在$scope.alerts中选择alert并加到$scope.alerts的末尾
-  //Math.random(array.length)能从array中随机选择一个index
+  //Math.floor(Math.random()*array.length)能从array中随机选择一个index
   //需要创建一个新的alert对象{},并把随机选择的alert的type和msg赋值给新创建的这个alert
   //双向绑定会自动更新页面
   $scope.addAlert = function() {

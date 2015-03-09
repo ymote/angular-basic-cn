@@ -2,7 +2,7 @@
 
 describe('Test Directive', function() {
 
-  describe('index page', function() {
+  describe('', function() {
 
     beforeEach(function() {
       browser.get('index.html');

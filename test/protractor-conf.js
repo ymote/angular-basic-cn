@@ -1,5 +1,11 @@
+var fs = require('fs');
+var re = /\S+/;
+
+var myIP = re.exec(fs.readFileSync('/etc/hosts','utf8'))[0];
+var driverIP = '172.17.42.1';
+
 exports.config = {
-  seleniumAddress: 'http://localhost:4444/wd/hub',
+  seleniumAddress: 'http://'+driverIP+':4444/wd/hub',
 
   allScriptsTimeout: 11000,
 
@@ -29,7 +35,7 @@ exports.config = {
 
   //chromeOnly: false,
 
-  baseUrl: 'http://localhost:8000/',
+  baseUrl: 'http://'+myIP+':8000/',
 
   framework: 'jasmine',
 

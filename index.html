@@ -14,7 +14,7 @@
     <div class="container" style="margin-top: 60px;" ng-controller="AlertController">
       <div class="row">
         <h3>用Angular构造系统通知</h3>
-        <alert ng-repeat="alert in alerts" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
+        <alert ng-repeat="alert in alerts track by $index" type="alert.type" close="closeAlert($index)">{{alert.msg}}</alert>
         <button class='btn btn-default add-alert' ng-click="addAlert()">增加随机通知</button>
       </div>
       <div class="row">

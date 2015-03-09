@@ -29,7 +29,7 @@ describe('Test Filters', function() {
       element(by.css('a.character')).click();
       first = element(by.repeater('actor in avengers.cast').row(0));
       character = first.element(by.css('td:nth-child(2)')).getText();
-      expect(character.getText()).toBe("tony stark / iron man");      
+      expect(character.getText()).toBe("bruce banner / the hulk"); 
     });
 
     it('should show actors\'character in reverse order when click the link on character -- the first is tony stark / iron man', function() {
@@ -37,7 +37,7 @@ describe('Test Filters', function() {
       element(by.css('a.character')).click();
       first = element(by.repeater('actor in avengers.cast').row(0));
       character = first.element(by.css('td:nth-child(2)')).getText();
-      expect(character.getText()).toBe("bruce banner / the hulk");      
+      expect(character.getText()).toBe("tony stark / iron man");     
     });
   });
   

@@ -33,9 +33,9 @@ describe('Test Promise.', function() {
         var length = rows.length;
         expect(length).toBe(3, 'should show 3 messages');
         if(length==3){
-          expect(rows[0].getText()).toBe('John'+"晚饭要点外卖"+'Pizza');
-          expect(rows[1].getText()).toBe('30 min'+'后，外卖送到了。');
-          expect(rows[2].getText()).toBe('John' + "正在享用美味的食物" + 'Pizza');          
+          expect(rows[0].getText()).toBe('John'+"晚饭要点外卖"+'Pizza', 'First message should be <name> 晚饭要点外卖 <food>');
+          expect(rows[1].getText()).toBe('30 min'+'后，外卖送到了。', 'Second message should be <time> 后，外卖送到了。');
+          expect(rows[2].getText()).toBe('John' + "正在享用美味的食物" + 'Pizza', 'Third message should be <name> 正在享用美味的食物 <food>');          
         }
       });
     });
@@ -44,11 +44,11 @@ describe('Test Promise.', function() {
       element(by.css('.beiju')).click();
       element.all(by.repeater('message in messages')).then(function(rows) {
         var length = rows.length;
-        expect(length).toBe(3);
+        expect(length).toBe(3, 'should show 3 messages');
         if(length==3){
-          expect(rows[0].getText()).toBe('John'+"晚饭要点外卖"+'Pizza');
-          expect(rows[1].getText()).toBe("外卖取消了，原因是"+'餐馆没开门');
-          expect(rows[2].getText()).toBe('John' + "因为" + '餐馆没开门' + "所以正在挨饿");         
+          expect(rows[0].getText()).toBe('John'+"晚饭要点外卖"+'Pizza', 'First message should be <name> 晚饭要点外卖 <food>');
+          expect(rows[1].getText()).toBe("外卖取消了，原因是"+'餐馆没开门', 'Second message should be 外卖取消了，原因是 <reason>');
+          expect(rows[2].getText()).toBe('John' + "因为" + '餐馆没开门' + "所以正在挨饿", 'Thirs message should be <name>因为<reason>所以正在挨饿');         
         }
       });
     });

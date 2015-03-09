@@ -22,6 +22,7 @@ describe('Test Promise.', function() {
     });
     
     it('Click the 4th button should display \'今晚减肥，不吃晚饭\'.', function(){
+      element(by.css('.menu div:nth-child(1) button')).click();
       var noFoodResult = element(by.css('.no-food'));
       element(by.css('.menu div:nth-child(4) button')).click();
       expect(noFoodResult.isDisplayed()).toBeTruthy();      

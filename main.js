@@ -1,8 +1,6 @@
 var myApp = angular.module('myApp', []);
 
 myApp.controller("AppCtrl", function($scope) {
-  $scope.number='13812345678';
-  
   $scope.callContent = function(number, network, message) {
     alert("号码： " + number + " 运营商： "+ network + " 通话内容： " + message);
   }

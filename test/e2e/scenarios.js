@@ -1,8 +1,8 @@
 'use strict';
 
-describe('Angular Promise', function() {
+describe('Test Promise.', function() {
 
-  describe('John order Pizza story. deliver time is 30 min.', function() {
+  describe('Story: John order Pizza. deliver time is 30 min.', function() {
 
     beforeEach(function() {
       browser.get('index.html');
@@ -27,7 +27,7 @@ describe('Angular Promise', function() {
 
     });
 
-    it('Should show 3 messges on successful order', function() {
+    it('On successful order, should show 3 messages -- 食物名字，外卖送达时间以及正在享用。', function() {
       element(by.css('.xiju')).click();
       element.all(by.repeater('message in messages')).then(function(rows) {
         var length = rows.length;
@@ -40,7 +40,7 @@ describe('Angular Promise', function() {
       });
     });
 
-    it('Should show 3 messges on unsuccessful order', function() {
+    it('On unsuccessful order, should show 3 messages -- 食物名字，取消原因，正在挨饿。', function() {
       element(by.css('.beiju')).click();
       element.all(by.repeater('message in messages')).then(function(rows) {
         var length = rows.length;

@@ -31,7 +31,7 @@ describe('Test Promise.', function() {
       element(by.css('.xiju')).click();
       element.all(by.repeater('message in messages')).then(function(rows) {
         var length = rows.length;
-        expect(length).toBe(3);
+        expect(length).toBe(3, 'should show 3 messages');
         if(length==3){
           expect(rows[0].getText()).toBe('John'+"晚饭要点外卖"+'Pizza');
           expect(rows[1].getText()).toBe('30 min'+'后，外卖送到了。');

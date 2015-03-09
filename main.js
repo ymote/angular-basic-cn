@@ -38,7 +38,7 @@ myApp.factory('Avengers', function() {
 function SuperherosCtrl($scope, Avengers) {
     $scope.avengers = Avengers;
     $scope.limit = 10;
-    $scope.reverse = false;
+    $scope.reverse = true;
 
     $scope.boxOfficeInUS = 220000000;
     $scope.boxOfficeInCN = 1400000000;

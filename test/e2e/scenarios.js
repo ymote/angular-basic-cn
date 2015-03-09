@@ -1,28 +1,32 @@
 'use strict';
 
-describe('Angular Promise', function() {
+describe('Test Promise.', function() {
 
-  describe('index page', function() {
+  describe('', function() {
+    var foodResult, noFoodResult;
 
     beforeEach(function() {
       browser.get('index.html');
     });
 
-    it('should show food on page', function() {
-      var foodResult = element(by.css('.food'));
-      var noFoodResult = element(by.css('.no-food'));
-
+    it('Click the 1st button should display \'今晚的食物是麦当劳\'.', function(){
+      foodResult = element(by.css('.food'));
       element(by.css('.menu div:nth-child(1) button')).click();
-      expect(foodResult.getText()).toBe('今晚的食物是麦当劳');
-
-      element(by.css('.menu div:nth-child(3) button')).click();
-      expect(foodResult.getText()).toBe('今晚的食物是小肥羊');
-
-      element(by.css('.menu div:nth-child(4) button')).click();
-      expect(foodResult.isDisplayed()).toBeFalsy();
-      expect(noFoodResult.isDisplayed()).toBeTruthy();
+      expect(foodResult.getText()).toBe('今晚的食物是麦当劳');      
     });
 
+    it('Click the 3rd button should display \'今晚的食物是小肥羊\'.', function(){
+      foodResult = element(by.css('.food'));
+      element(by.css('.menu div:nth-child(3) button')).click();
+      expect(foodResult.getText()).toBe('今晚的食物是小肥羊');    
+    });
+    
+    it('Click the 4th button should display \'今晚减肥，不吃晚饭\'.', function(){
+      var noFoodResult = element(by.css('.no-food'));
+      element(by.css('.menu div:nth-child(4) button')).click();
+      expect(noFoodResult.isDisplayed()).toBeTruthy();      
+    });
+    
   });
   
 });

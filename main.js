@@ -5,7 +5,7 @@ angular.module('myApp', [])
   $scope.data = { greeting: "Hello" };
 
   //change the character
-  $scope.data.character='Welcome to the ';
+  $scope.data.character='Supersonic';
   
   //language and acronym are missing, please help write them
   //language
